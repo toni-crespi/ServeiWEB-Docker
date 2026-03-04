@@ -3,8 +3,9 @@ services:
     build:
       context: ..
       dockerfile: http.Dockerfile
+      network: host    # <-- AFEGEIX AQUESTA LÍNIA AQUÍ
     container_name: web-dck-botsoncom
-    network_mode: "host" # Això fa que agafi la IP de la màquina física
+    network_mode: "host"
     volumes:
       - ../html:/var/www/botson
       - ../imatges:/srv/www/botson/imatges
