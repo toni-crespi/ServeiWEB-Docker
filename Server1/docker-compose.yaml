@@ -1,0 +1,10 @@
+services:
+  web-botsoncom:
+    build:
+      context: ..
+      dockerfile: http.Dockerfile
+    container_name: web-dck-botsoncom
+    network_mode: "host" # Això fa que agafi la IP de la màquina física
+    volumes:
+      - ../html:/var/www/botson
+      - ../imatges:/srv/www/botson/imatges
