@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  web-botsonorg:
+    build:
+      context: ..
+      dockerfile: http.Dockerfile
+    container_name: web-dck-botsonorg
+    network_mode: "host"
+    volumes:
+      - ../html2:/var/www/botsonorg
+      - ../imatges2:/srv/www/botsonorg/imatges
